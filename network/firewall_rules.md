@@ -49,5 +49,5 @@ OPNsense firewall rules managed by king-of-hearts VM (.123).
 
 ## Related Documentation
 
-- [[network_topology]] — Network segments and bridges
-- [[dhcp_configuration]] — Static IP mappings
+- [network_topology](https://github.com/arm-ser/house-of-cards-v3/edit/master/network/network_topology.md) — Network segments and bridges
+- [dhcp_configuration](https://github.com/arm-ser/house-of-cards-v3/blob/master/network/dhcp_configuration.md) — Static IP mappings
