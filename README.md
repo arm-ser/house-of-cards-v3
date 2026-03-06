@@ -236,37 +236,26 @@ All storage is managed by TrueNAS SCALE (queen-of-hearts) with ZFS. VMs mount da
 > **Current State**: Migration complete. Single-server infrastructure fully operational. Security hardening and automation improvements in progress.
 
 ### Security Hardening
-- [ ] SSH-only access across all VMs and LXCs
-- [ ] Disable root login — SSH key authentication only
-- [ ] Audit sudo/root configurations per server
-- [ ] Turn off TrueNAS SSH after setup tasks complete
+- SSH-only access across all VMs and LXCs
+- Disable root login — SSH key authentication only
+- Audit sudo/root configurations per server
 
 ### Infrastructure Automation
-- [ ] Configure RTX 3090 GPU passthrough to ace-of-clubs
-- [ ] Deploy Ollama + OpenWebUI (requires GPU passthrough)
-- [ ] Complete Ansible/Semaphore setup with encrypted credentials
-- [ ] Improve proxmox startup script with service health checks
-- [ ] Set up weekly config export cron jobs
-- [ ] Add docker image cleanup automation to all Docker VMs
-
-### Service Completion
-- [ ] Connect OnlyOffice to Nextcloud
-- [ ] Redeploy ProtonMail Bridge when updated image available
-- [ ] Configure Pulse monitors for all services
+- Configure RTX 3090 GPU passthrough to ace-of-clubs
+- Improve proxmox startup script with service health checks
+- Set up weekly config export cron jobs
 
 ### DNS & Networking
-- [ ] Update DHCP to use new primary DNS server
-- [ ] Setup Raspberry Pi as backup DNS
-- [ ] Add local short domains to DNS (e.g., ace.dmnd)
-- [ ] Verify IoT network has no internet access
+- Setup Raspberry Pi as backup DNS
+- Add local short domains to DNS (e.g., ace.dmnd)
 
 ### Storage & Encryption
-- [ ] Create TrueNAS encryption passphrase + USB key storage
-- [ ] Create jack-of-diamonds VM for encrypted disk management
+- Create TrueNAS encryption passphrase + USB key storage
+- Create jack-of-diamonds VM for encrypted disk management
 
 ### Verification
-- [ ] Test restore from UrBackup
-- [ ] 48-hour burn-in: monitor temps, RAM, disk health
+- Test restore from UrBackup
+- 48-hour burn-in: monitor temps, RAM, disk health
 
 ---
 
