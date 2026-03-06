@@ -57,5 +57,6 @@ All services accessible via `*.octachainlabs.com` through NPMPlus reverse proxy 
 
 ## Related Documentation
 
-- [[network_topology]] — Network overview
-- [[dhcp_configuration]] — IP assignments
+- [network_topology](https://github.com/arm-ser/house-of-cards-v3/edit/master/network/network_topology.md) — Network segments and bridges
+- [dhcp_configuration](https://github.com/arm-ser/house-of-cards-v3/blob/master/network/dhcp_configuration.md) — Static IP mappings
+
