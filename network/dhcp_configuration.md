@@ -79,6 +79,6 @@ IPs encode the card identity: `192.168.1.{suit_base + rank}`
 
 ## Related Documentation
 
-- [[network_topology]] — Network segments
-- [[dns_configuration]] — DNS setup
-- [[firewall_rules]] — OPNsense rules
+- [network_topology](https://github.com/arm-ser/house-of-cards-v3/edit/master/network/network_topology.md) — Network segments and bridges
+- [firewall_rules](https://github.com/arm-ser/house-of-cards-v3/blob/master/network/firewall_rules.md) — OPNsense firewall rules
+- [dns_configuration](https://github.com/arm-ser/house-of-cards-v3/blob/master/network/dns_configuration.md) — Technitium DNS setup
