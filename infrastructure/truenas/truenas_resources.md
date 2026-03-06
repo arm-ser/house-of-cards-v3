@@ -1,0 +1,2 @@
+- [Truenas Using Full Storage](https://www.youtube.com/watch?v=_u8qTN3cCnQ&t=1554)
+- [Truenas in Proxmox: Adding Hard Drives](https://www.youtube.com/watch?v=M3pKprTdNqQ&t=555)
