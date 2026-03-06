@@ -56,52 +56,52 @@ The homelab uses **5 isolated network segments** managed by an OPNsense VM (king
         │ PCIe Port 2                   │ PCIe Port 3    │ PCIe Port 4      │
         │ LAN                           │ GUST           │ IoT              │
         │                               │                │                  │
-  ┌─────┴──────┐                 ┌──────┴──────┐   ┌─────┴──────┐          │
-  │  8-port    │                 │ Netgear     │   │ Netgear    │          │
-  │  Switch    │                 │ AX1800      │   │ R7900P     │          │
-  │ TL-SG108E │                 │ (WiFi 6)    │   │ (AP Mode)  │          │
-  └─────┬──────┘                 └─────────────┘   └────────────┘          │
+  ┌─────┴──────┐                 ┌──────┴──────┐   ┌─────┴──────┐           │
+  │  8-port    │                 │ Netgear     │   │ Netgear    │           │
+  │  Switch    │                 │ AX1800      │   │ R7900P     │           │
+  │ TL-SG108E  │                 │ (WiFi 6)    │   │ (AP Mode)  │           │
+  └─────┬──────┘                 └─────────────┘   └────────────┘           │
         │                                                                   │
         │ Onboard NIC                                                       │
         │                                                                   │
   ┌─────┴──────────────────────────────────────────────────────────────┐    │
-  │                    ace-of-hearts (.111)                             │    │
+  │                    ace-of-hearts (.111)                            │    │
   │                    Proxmox VE Host — X99 Server                    │    │
   │                                                                    │    │
-  │  ┌─── vmbr0 (LAN 192.168.1.0/24) ─────────────────────────────┐  │    │
-  │  │ queen-of-hearts (.122)  TrueNAS SCALE — 27.8TB Storage     │  │    │
-  │  │ jack-of-hearts  (.121)  Technitium DNS (Primary)           │  │    │
-  │  │ ten-of-hearts   (.120)  NPMPlus + Portainer                │  │    │
-  │  │ five-of-hearts  (.115)  UrBackup Server                    │  │    │
-  │  │ ace-of-diamonds (.131)  Secure Services (Vaultwarden, etc) │  │    │
-  │  │ queen-of-diamonds(.142) Nextcloud + OnlyOffice             │  │    │
-  │  │ king-of-diamonds(.143)  Immich (Photos)                    │  │    │
-  │  │ ace-of-spades   (.151)  Media Stack (Jellyfin, *arr)       │  │    │
-  │  │ ace-of-clubs    (.171)  AI + Automation (n8n, HedgeDoc)    │  │    │
-  │  │ jack-of-diamonds(.141)  Encrypted Disk (Planned)           │  │    │
-  │  └─────────────────────────────────────────────────────────────┘  │    │
+  │  ┌─── vmbr0 (LAN 192.168.1.0/24) ─────────────────────────────┐    │    │
+  │  │ queen-of-hearts (.122)  TrueNAS SCALE — 27.8TB Storage     │    │    │
+  │  │ jack-of-hearts  (.121)  Technitium DNS (Primary)           │    │    │
+  │  │ ten-of-hearts   (.120)  NPMPlus + Portainer                │    │    │
+  │  │ five-of-hearts  (.115)  UrBackup Server                    │    │    │
+  │  │ ace-of-diamonds (.131)  Secure Services (Vaultwarden, etc) │    │    │
+  │  │ queen-of-diamonds(.142) Nextcloud + OnlyOffice             │    │    │
+  │  │ king-of-diamonds(.143)  Immich (Photos)                    │    │    │
+  │  │ ace-of-spades   (.151)  Media Stack (Jellyfin, *arr)       │    │    │
+  │  │ ace-of-clubs    (.171)  AI + Automation (n8n, HedgeDoc)    │    │    │
+  │  │ jack-of-diamonds(.141)  Encrypted Disk (Planned)           │    │    │
+  │  └────────────────────────────────────────────────────────────┘    │    │
   │                                                                    │    │
-  │  ┌─── vmbr1 (DMZ 172.16.10.0/24) ─────────────────────────────┐  │    │
-  │  │ two-of-clubs (172.16.10.172)  UrBackup (Offsite Backup)    │  │    │
-  │  └─────────────────────────────────────────────────────────────┘  │    │
+  │  ┌─── vmbr1 (DMZ 172.16.10.0/24) ─────────────────────────────┐    │    │
+  │  │ two-of-clubs (172.16.10.172)  UrBackup (Offsite Backup)    │    │    │
+  │  └────────────────────────────────────────────────────────────┘    │    │
   │                                                                    │    │
-  │  ┌─── vmbr2 (IoT 192.168.3.0/24) ─────────────────────────────┐  │    │
-  │  │ three-of-clubs (192.168.3.173)  Home Assistant              │──┘    │
-  │  └─────────────────────────────────────────────────────────────┘       │
-  │                                                                    │
-  │  ┌─── vmbr3 (GUST 192.168.147.0/24) ──────────────────────────┐  │
-  │  │ (Future guest-facing VMs)                                   │  │
-  │  └─────────────────────────────────────────────────────────────┘  │
-  └────────────────────────────────────────────────────────────────────┘
+  │  ┌─── vmbr2 (IoT 192.168.3.0/24) ──────────────────────────────┐   │    │
+  │  │ three-of-clubs (192.168.3.173)  Home Assistant              │───┘    │
+  │  └─────────────────────────────────────────────────────────────┘        │
+  │                                                                         │
+  │  ┌─── vmbr3 (GUST 192.168.147.0/24) ───────────────────────────┐        │
+  │  │ (Future guest-facing VMs)                                   │        │
+  │  └─────────────────────────────────────────────────────────────┘        │
+  └─────────────────────────────────────────────────────────────────────────┘
 
 ╔══════════════════════════════════════════════════════════════════════════╗
-║                          NETWORK ISOLATION RULES                        ║
+║                          NETWORK ISOLATION RULES                         ║
 ╠══════════════════════════════════════════════════════════════════════════╣
-║  VPN   →  Full access to LAN, GUST, DMZ, Internet                      ║
-║  LAN   →  Full access to all segments                                   ║
-║  GUST  →  Limited LAN access (DNS, NAS), blocked from DMZ              ║
-║  IoT   →  No internet — local only, Home Assistant communicates         ║
-║  DMZ   →  Strict isolation, outbound via Cloudflare tunnel only         ║
+║  VPN   →  Full access to LAN, GUST, DMZ, Internet                        ║
+║  LAN   →  Full access to all segments                                    ║
+║  GUST  →  Limited LAN access (DNS, NAS), blocked from DMZ                ║
+║  IoT   →  No internet — local only, Home Assistant communicates          ║
+║  DMZ   →  Strict isolation, outbound via Cloudflare tunnel only          ║
 ╚══════════════════════════════════════════════════════════════════════════╝
 ```
 
@@ -290,10 +290,6 @@ All storage is managed by TrueNAS SCALE (queen-of-hearts) with ZFS. VMs mount da
 The following creators have been instrumental in my learning journey. Their content simplified complex topics and made them accessible. I encourage you to subscribe and support their work.
 
 [Awesome Open Source](https://www.youtube.com/@AwesomeOpenSource/featured) | [Lawrence Systems](https://www.youtube.com/@LAWRENCESYSTEMS) | [DB Tech](https://www.youtube.com/@DBTechYT) | [Raid Owl](https://www.youtube.com/@RaidOwl) | [Ben Eater](https://www.youtube.com/@BenEater) | [IBRACORP](https://www.youtube.com/@IBRACORP) | [Techno Tim](https://www.youtube.com/@TechnoTim) | [Mark Furneaux](https://www.youtube.com/@TheUbuntuGuy) | [Christian Lempa](https://www.youtube.com/@christianlempa) | [John Hammond](https://www.youtube.com/@_JohnHammond)
-
-[Sevada Isayan](https://www.linkedin.com/in/sevadaisayan/) | [Gevorg Atoyan](https://www.linkedin.com/in/gevorgatoyan/)
-
-[Tumo Center Of Creative Technologies](https://tumo.org/)
 
 ---
 
