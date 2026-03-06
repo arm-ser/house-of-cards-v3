@@ -93,7 +93,7 @@ All DHCP scopes push the CARP VIP (.1) as default gateway. Automatic failover if
 
 ## Related Documentation
 
-- [[firewall_rules]] — OPNsense firewall rules
-- [[dhcp_configuration]] — Static IP mappings
-- [[dns_configuration]] — Technitium DNS setup
-- [[service_matrix]] — Service-to-VM mapping
+- [firewall_rules](https://github.com/arm-ser/house-of-cards-v3/blob/master/network/firewall_rules.md) — OPNsense firewall rules
+- [dhcp_configuration](https://github.com/arm-ser/house-of-cards-v3/blob/master/network/dhcp_configuration.md) — Static IP mappings
+- [dns_configuration](https://github.com/arm-ser/house-of-cards-v3/blob/master/network/dns_configuration.md) — Technitium DNS setup
+- [service_matrix](https://github.com/arm-ser/house-of-cards-v3/blob/master/network/service_matrix.md) — Service-to-VM mapping
