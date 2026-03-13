@@ -2,7 +2,7 @@
     1.  `ssh root@server_ip_or_hostname`
 
 2.  Create Non-root Admin User (with sudo privileges)
-    1.  [[create_non_root_user|Create Non Root User]]
+    1.  [[create_non_root_user]]
     2.  ==IMPORTANT== : if you already uploaded your ssh key to the server (from cloud provider or github), use [[copy_ssh_key_to_admin|Copy SSH Key to Admin]] script to transfer it to your Admin user and ==SKIP Step 4==
 
 3.  Close SSH connection
